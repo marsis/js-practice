@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//var carriage[n] = {
+//    previous: carriage[n-1],
+//    next: carriage[n+1],
+//    light: true
+//}
+
+
+var arr = [{
+        name: 'carriage1',
+        previous: 'carriage3',
+        next: 'carriage2',
+        light: true
+    },
+    {
+        name: 'carriage2',
+        previous: 'carriage1',
+        next: 'carriage3',
+        light: true
+    },
+    {
+        name: 'carriage3',
+        previous: 'carriage2',
+        next: 'carriage1',
+        light: false
+    }];
+
+
+    console.log(arr);
+    var counter = 0;
+    for(var i=1; i<arr.length; i++){
+        counter++;
+        if(arr[i].light == true){
+            arr[i].light = false;
+            console.log("arr"+ i,arr[i].light);
+        }
+        console.log(counter);
+    }
+
+</script>
+
+</body>
+</html>
